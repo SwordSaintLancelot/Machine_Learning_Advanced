@@ -14,8 +14,8 @@ from scipy.io import loadmat
 #exercise 1 question 3
 
 test = []
-data= np.loadtxt('E:\\GitHub\\Machine_Learning_Advanced\\Exercise_1\\locationData.csv')
-with open ("E:\\GitHub\\Machine_Learning_Advanced\\Exercise_1\\locationData.csv") as fd:
+data= np.loadtxt('E:\\GitHub\\Machine_Learning_Advanced\\Least_Square_Fit\\locationData.csv')
+with open ("E:\\GitHub\\Machine_Learning_Advanced\\Least_Square_Fit\\locationData.csv") as fd:
     for i in fd:
         val = i.split(" ")
         val = [float(v) for v in val]
@@ -37,7 +37,7 @@ plt.show()
 
 
 # exercise 1 question 4 
-mat = loadmat("E:\\GitHub\\Machine_Learning_Advanced\\Exercise_1\\twoClassData.mat")
+mat = loadmat("E:\\GitHub\\Machine_Learning_Advanced\\Least_Square_Fit\\twoClassData.mat")
 X = mat['X']
 y = mat['y'].ravel()
 
@@ -47,8 +47,8 @@ plt.show()
 
 # Exxercise 1 question 5 
 
-X1 = np.array(np.load('E:\\GitHub\\Machine_Learning_Advanced\\Exercise_1\\x.npy'))
-Y1 = np.array(np.load('E:\\GitHub\\Machine_Learning_Advanced\\Exercise_1\\y.npy'))
+X1 = np.array(np.load('E:\\GitHub\\Machine_Learning_Advanced\\Least_Square_Fit\\x.npy'))
+Y1 = np.array(np.load('E:\\GitHub\\Machine_Learning_Advanced\\Least_Square_Fit\\y.npy'))
 A = np.vstack([X1,np.ones(len(X1))]).T
 
 m,c = np.linalg.lstsq(A,Y1,rcond = None)[0]
