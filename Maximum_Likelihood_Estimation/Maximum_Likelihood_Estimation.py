@@ -30,8 +30,6 @@ for f in np.linspace(0, 0.5, 1000):
     
 fHat = frequencies[np.argmax(scores)]
 
-#question 5
-
 
 # Read the data
 
@@ -48,7 +46,6 @@ x = X.ravel()
 y = Y.ravel()
 z = Z.ravel()
 
-# ********* TODO 1 **********
 # Create data matrix
 # Use function "np.column_stack".
 # Function "np.ones_like" creates a vector like the input.
